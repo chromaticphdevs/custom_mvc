@@ -33,4 +33,14 @@
 		'chartset' => ''
 	];
 
+	$database['local'] = [
+		'driver' => 'mysql',
+		'host' => 'localhost',
+		'username' => 'root',
+		'dbname' => 'ecrash',
+		'password' => '',
+		'port' => '',
+		'chartset' => ''
+	];
+
 return $database;

@@ -11,7 +11,7 @@
     }
 
 
-    function loadTo($viewPath = 'tmp/backend')
+    function loadTo($viewPath = 'tmp/layout_backoffice')
     {
         $data = $GLOBALS['data'] ?? null;
 

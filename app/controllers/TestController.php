@@ -7,7 +7,12 @@
 			return $this->view('test/form');
 		}
 
-		public function create() {
+		public function create($id = 3) {
 			$post = request()->posts();
+
+			dump([
+				$post,
+				$id
+			]);
 		}
 	}

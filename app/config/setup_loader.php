@@ -3,15 +3,16 @@
     define('SYSTEM_MODE' , $system['mode']);
     define('UI_THEME' , $ui['vendor']);
 
+    define('URL' , 'http://192.168.1.20/ecrash_tool');
+    define('DBVENDOR' , $database[SYSTEM_MODE]['driver']);
+    define('DBHOST' , $database[SYSTEM_MODE]['host']);
+    define('DBUSER' , $database[SYSTEM_MODE]['username']);
+    define('DBPASS' , $database[SYSTEM_MODE]['password']);
+    define('DBNAME' , $database[SYSTEM_MODE]['dbname']);
+    
     switch(SYSTEM_MODE)
     {
         case 'local':
-            define('URL' , 'http://dev.cmaticmvc');
-            define('DBVENDOR' , 'mysql');
-            define('DBHOST' , 'localhost');
-            define('DBUSER' , 'root');
-            define('DBPASS' , '');
-            define('DBNAME' , 'stv_dev');
 
             define('BASECONTROLLER' , 'AuthController');
             define('BASEMETHOD' , 'index');
@@ -26,12 +27,6 @@
 
         case 'dev':
             define('URL' , '');
-            define('DBVENDOR' , '');
-            define('DBHOST' , '');
-            define('DBUSER' , '');
-            define('DBPASS' , '');
-            define('DBNAME' , '');
-
             define('BASECONTROLLER' , 'Pages');
             define('BASEMETHOD' , 'index');
 
@@ -45,12 +40,6 @@
 
         case 'down':
             define('URL' , '');
-            define('DBVENDOR' , '');
-            define('DBHOST' , '');
-            define('DBUSER' , '');
-            define('DBPASS' , '');
-            define('DBNAME' , '');
-
             define('BASECONTROLLER' , 'Maintenance');
             define('BASEMETHOD' , 'index');
 
@@ -63,12 +52,6 @@
 
         case 'up':
             define('URL' , 'https://www.archivecatalog.directory');
-            define('DBVENDOR' , 'mysql');
-            define('DBHOST' , 'localhost');
-            define('DBUSER' , 'korpzpru_th_main');
-            define('DBPASS' , 'Y[@h=Ytz;(f}');
-            define('DBNAME' , 'korpzpru_archive');
-
             define('BASECONTROLLER' , 'AuthController');
             define('BASEMETHOD' , 'index');
 

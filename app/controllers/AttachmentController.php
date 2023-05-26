@@ -1,7 +1,4 @@
 <?php
-
-use Mpdf\Tag\I;
-
 	class AttachmentController extends Controller
 	{	
 

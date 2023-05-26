@@ -5,7 +5,7 @@
 
 	class UserModel extends Model
 	{
-		public $table = 'users';
+		public $table = 'user';
 
 		protected $_fillables = [
 			'id',
@@ -238,7 +238,7 @@
 		public function getAll($params = [])
 		{
 			$where = null;
-			$order = " ORDER BY firstname asc ";
+			$order = " ORDER BY name_first asc ";
 
 			if(isset($params['order']))
 				$order = " ORDER BY {$params['order']}";

@@ -1,8 +1,10 @@
-<IfModule mod_rewrite.c>
-  Options -Multiviews
-  RewriteEngine On
-  RewriteBase /public
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
-</IfModule>
+Options -Multiviews
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} \s/+index\.php\?([^\s&]+) [NC]
+RewriteRule ^ %1? [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?url=$1 [L,QSA]
+

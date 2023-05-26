@@ -2,6 +2,7 @@
 	ob_clean();
 
 	$root = dirname(dirname(__FILE__));
+	require_once($root.'/app/config/database.php');
 	//config
 	require_once($root.'/app/config/setup.php');
 	//environment

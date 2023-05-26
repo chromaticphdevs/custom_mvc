@@ -10,7 +10,6 @@
 			*change the database here.
 			*/
 			$this->userModel = model('UserModel');
-			$this->userModel->_setDatabase('uat');
 		}
 
 		
